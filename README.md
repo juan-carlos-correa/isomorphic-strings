@@ -1,59 +1,56 @@
-> 📄 **New here?** 👉 [See how to use this template →](./TEMPLATE-INSTRUCTIONS.md)
+# 🧠 Isomorphic Strings
 
-# 🧠 [EXERCISE TITLE HERE]
-
-_A quick one-liner describing the problem._  
-_Example: Check if two strings are anagrams._
+_A function to determine if two strings are isomorphic._
 
 ## ✍️ Your Task
 
-Your goal is to solve the coding challenge using a clear and efficient solution.
-
-1. Read the problem and input/output requirements
-2. Implement your solution in `src/main.mjs`
-3. Run tests with `npm run test` to validate your solution
+1. Read the problem and requirements carefully  
+2. Write your implementation in `src/main.mjs`  
+3. Test your solution with `npm run test`
 
 ## 📘 Description
 
-Describe the problem in detail.
+Given two strings `s` and `t`, determine if they are **isomorphic**.
 
-Example:
+Two strings are isomorphic if the characters in `s` can be replaced to get `t`, with the rule that **each character must map to another character uniquely** and preserve the order.
 
-Given two strings `s1` and `s2`, return `true` if `s2` is an anagram of `s1`, and `false` otherwise.
+The same character must always map to the same character, and no two characters may map to the same character.
 
-An anagram is a word or phrase formed by rearranging the letters of a different word.
+### Examples
+
+```js
+isIsomorphic('egg', 'add') // true
+isIsomorphic('foo', 'bar') // false
+isIsomorphic('paper', 'title') // true
+```
 
 ## 📥 Input
 
-- `s1`: a string (1 ≤ s1.length ≤ 10⁵)
-- `s2`: a string (1 ≤ s2.length ≤ 10⁵)
-- No spaces, only lowercase letters
+- `s`: string (1 ≤ s.length ≤ 10⁵)
+- `t`: string (1 ≤ t.length ≤ 10⁵)
+- Only lowercase letters
+- `s` and `t` have the same length
 
 ## 📤 Output
 
-- Returns `true` or `false`
+- Return `true` if the strings are isomorphic, otherwise return `false`
 
 ## 🛠️ Instructions
 
-1. Open the file `src/main.mjs` and implement the solution.
-2. To verify your solution, run the tests in `src/main.test.js` using:
+1. Open `src/main.mjs` and implement the function `isIsomorphic(s, t)`
+2. Run tests in `test/main.test.js` using:
 
 ```bash
 npm run test
 ```
 
-> ✅ Do not modify the test file unless you’re adding extra edge cases.
+✅ Do not modify the test file unless you're adding extra test cases.
 
 ## 💡 Tips
 
-_You can add any tips or hints that might help the user solve the problem._
-
-For example:
-
-- Use `.toLowerCase()` if needed
-- Use objects, arrays or `Map` to count character frequencies
-- Aim for O(n) time complexity if possible
-- Compare frequency maps or use one-pass counter
+- Check that one character doesn’t map to multiple others.
+- Think about edge cases like repeated characters and mismatched patterns.
+- Target **O(n)** time complexity.
 
 ## 🧪 Run Tests
 
@@ -64,6 +61,4 @@ npm install
 npm run test
 ```
 
-✅ Make sure your implementation is in `src/main.mjs` and your tests in `test/main.test.js`.
-
-Happy coding! 🚀
+✅ Make sure your implementation is in `src/main.mjs` and your tests in `src/main.test.js`.
